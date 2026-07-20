@@ -10,10 +10,10 @@ This repository includes both my practice programs (learning how to use the Pico
 -Pico set up via USB to computer [X]
 -MicroPython set up and installed [X]
 -Ran first LED program(code can be found in one of the files) [X]
--Write the soil moisture monitor program []
+-Write the soil moisture monitor program [X]
 -Connect the soil moisture sensor to the Pico [X]
 -Test the sensor with Thonny [X]
--Get first moisture readings []
+-Get first moisture readings [X]
 -Display the moisture readings []
 -Continue advancing as needed [TBD]
 

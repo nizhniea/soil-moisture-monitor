@@ -40,7 +40,8 @@ def moisture_status(percent):
     else:
         return "Way Overdone"
     
-    
+#Testing------
+
 reading = 30000
 
 percent = moisture_percent(reading)

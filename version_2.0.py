@@ -3,6 +3,8 @@ import serial
 pico = serial.Serial("COM7", 115200, timeout=2)
 from datetime import datetime
 import os
+import pandas as pd
+import matplotlib.pyplot as plt
 
 
 lucky_bamboo = {
@@ -109,7 +111,68 @@ def save_measurement(reading, percent, status):
         file.write(f"{timestamp},{reading},{percent},{status}\n")
 
 def show_graph():
-    print("Graph button clicked!")
+    data = pd.read_csv("moisture_log_2.csv")
+    print(data)
+
+    data["Timestamp"] = pd.to_datetime(
+    data["Timestamp"],
+    format="mixed"
+    )
+    plt.figure(figsize=(10, 5))
+    plt.plot(
+    data["Timestamp"],
+    data["Percent"],
+    marker="o",
+    linewidth=2
+    )      
+
+    plt.title("Lucky Bamboo Moisture History")
+    plt.xlabel("Time")
+    plt.ylabel("Moisture (%)")
+
+    plt.ylim(0, 100)
+
+    plt.grid(True)
+    plt.xticks(rotation=45)
+
+
+    plt.axhspan(
+        0,
+        lucky_bamboo["Very Dry"],
+        color="red",
+        alpha=0.2
+    )
+
+    plt.axhspan(
+        lucky_bamboo["Very Dry"],
+        lucky_bamboo["Dry"],
+        color="yellow",
+        alpha=0.2
+    )
+
+    plt.axhspan(
+        lucky_bamboo["Dry"],
+        lucky_bamboo["Moist"],
+        color="green",
+        alpha=0.2
+    )
+
+    plt.axhspan(
+        lucky_bamboo["Moist"],
+        lucky_bamboo["Wet"],
+        color="blue",
+        alpha=0.2
+    )
+
+    plt.axhspan(
+        lucky_bamboo["Wet"],
+        lucky_bamboo["Soaking in water?"],
+        color="purple",
+        alpha=0.2
+    )
+
+    plt.tight_layout()
+    plt.show()
 
 graph_button = tk.Button(
     app,

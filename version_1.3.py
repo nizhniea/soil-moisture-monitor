@@ -1,7 +1,8 @@
-#Version 1.2
+#Version 1.3
 from datetime import datetime
 import os
 now = datetime.now()
+import pandas as pd
 
 import serial
 pico = serial.Serial("COM7", 115200, timeout=2)
@@ -84,6 +85,9 @@ while True:
 
         with open("moisture_log_2.csv", "a") as file:
             file.write(f"{timestamp},{reading},{percent},{status}\n")
+        data = pd.read_csv("moisture_log_2.csv")
+
+        print(data)
 
     elif choice == "no":
         pico.close()

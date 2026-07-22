@@ -5,7 +5,23 @@ from datetime import datetime
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
+from PIL import Image, ImageTk
+import tkinter as tk
+app = tk.Tk()
+background_image = Image.open("moisture_gui.png")
+background_image = background_image.resize((500, 400))
+background_photo = ImageTk.PhotoImage(background_image)
+background = tk.Label(
+    app,
+    image=background_photo
+)
 
+background.place(
+    x=0,
+    y=0,
+    relwidth=1,
+    relheight=1
+)
 
 lucky_bamboo = {
     "Very Dry": 20,
@@ -48,12 +64,10 @@ def moisture_status(percent):
     else:
         return "Soaking in water?"
 
-import tkinter as tk
 
-app = tk.Tk()
+
 app.title("Moisture Sensor Monitor")
 app.geometry("500x400")
-app.configure(bg="#E8F5E9")
 
 title = tk.Label(
     app,
@@ -102,7 +116,7 @@ def measure():
     save_measurement(reading, percent, status)
 
 def save_measurement(reading, percent, status):
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     if not os.path.exists("moisture_log_2.csv"):
         with open("moisture_log_2.csv", "a") as file:
             file.write("Timestamp,Reading,Percent,Status\n")
@@ -112,7 +126,6 @@ def save_measurement(reading, percent, status):
 
 def show_graph():
     data = pd.read_csv("moisture_log_2.csv")
-    print(data)
 
     data["Timestamp"] = pd.to_datetime(
     data["Timestamp"],

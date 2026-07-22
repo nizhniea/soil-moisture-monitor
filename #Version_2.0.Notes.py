@@ -7,5 +7,4 @@
 #The window will give users the option to see the current moisture levels, historical data, and graphs.
 #Need to connect this back with CSV file.
 #Made a semi-permenant color for the background of the GUI- *Add custom designed background via Canvas in future*
-#Drew custom background for the GUI via Canva, and added it to tkinter. through pillow. 
-
+#Drew custom background for the GUI via Canva, and added it to tkinter through pillow. 

@@ -7,23 +7,5 @@
 #The window will give users the option to see the current moisture levels, historical data, and graphs.
 #Need to connect this back with CSV file.
 #Made a semi-permenant color for the background of the GUI- *Add custom designed background via Canvas in future*
+#Drew custom background for the GUI via Canva, and added it to tkinter. through pillow. 
 
-
-def measure():
-    pico.write(b"measure\n")
-
-    reading = pico.readline().decode().strip()
-
-    reading = float(reading)
-    
-    percent = moisture_percent(reading)
-    moisture_label.config(text=f"{percent}%")
-    status_label.config(text=moisture_status(percent))
-
-measure_button = tk.Button(
-    app,
-    text="Measure Moisture",
-    command=measure
-)
-measure_button.pack(pady=20)
-app.mainloop()

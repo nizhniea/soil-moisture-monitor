@@ -210,5 +210,3 @@ measure_button = tk.Button(
     activeforeground="white",
 )
 measure_button.pack(pady=20)
-
-app.mainloop()

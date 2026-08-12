@@ -24,10 +24,10 @@ background.place(
 )
 
 lucky_bamboo = {
-    "Very Dry": 20,
-    "Dry": 40,
-    "Moist": 60,
-    "Wet": 80,
+    "Very Dry": 10,
+    "Dry": 20,
+    "Moist": 30,
+    "Wet": 50,
     "Soaking in water?": 100
 }
 dry_soil_mean = 43843.6
@@ -210,3 +210,5 @@ measure_button = tk.Button(
     activeforeground="white",
 )
 measure_button.pack(pady=20)
+
+app.mainloop()

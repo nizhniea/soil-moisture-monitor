@@ -1,4 +1,3 @@
-#Version_2.0.py
 import serial
 pico = serial.Serial("COM7", 115200, timeout=2)
 from datetime import datetime
@@ -117,8 +116,8 @@ def measure():
 
 def save_measurement(reading, percent, status):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
-    if not os.path.exists("moisture_log_2.csv"):
-        with open("moisture_log_2.csv", "a") as file:
+    if not os.path.exists("experiment.1.csv"):
+        with open("experiment.1.csv", "a") as file:
             file.write("Timestamp,Reading,Percent,Status\n")
 
     with open("moisture_log_2.csv", "a") as file:

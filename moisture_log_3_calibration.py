@@ -11,3 +11,7 @@
 #Fifth day: 63.9%
 
 #Sixth day: 63.6%
+
+#Seventh day: 63.1%
+
+#Eigth day: 62.6%

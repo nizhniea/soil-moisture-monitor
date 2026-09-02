@@ -15,3 +15,7 @@
 #Seventh day: 63.1%
 
 #Eigth day: 62.6%
+
+#Ninth day: 62%
+
+#Tenth day: 61.7%

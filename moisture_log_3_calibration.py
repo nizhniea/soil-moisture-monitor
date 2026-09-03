@@ -21,3 +21,6 @@
 #Tenth day: 61.7%
 
 #Eleventh day: 61.2%
+
+Twelfth day: 60.5%
+

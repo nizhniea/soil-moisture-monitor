@@ -24,3 +24,4 @@
 
 Twelfth day: 60.5%
 
+Thirteenth day: 59.8%

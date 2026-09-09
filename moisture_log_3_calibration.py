@@ -31,3 +31,7 @@ Fourteenth day: 59.1%
 
 Fifteenth day: 58.5%
 *taken around midnight*
+
+Sixteenth day: 57.7%
+
+Seventeenth day: 57%

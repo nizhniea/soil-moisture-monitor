@@ -37,3 +37,10 @@ Sixteenth day: 57.7%
 Seventeenth day: 57%
 
 Eighteenth day: 56.2%
+
+Nineteenth day: 55.1%
+
+Twentieth day: 55.6%
+??
+
+Twenty-first day: 52.5%

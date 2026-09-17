@@ -44,3 +44,9 @@ Twentieth day: 55.6%
 ??
 
 Twenty-first day: 52.5%
+
+Twenty-second day: 50%
+
+*POSITIONED IN THE CENTER OF THE POT 0N 09.16.2026*
+50.1% + 12% FURTHER IN CENTER...
+Added 60mL of water on 09.16.2026 at 9:30PM
